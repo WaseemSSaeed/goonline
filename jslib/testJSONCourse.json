@@ -4,7 +4,7 @@
         "courseDuration": 2,
         "courseColor": "teal",
         "courseAbout": "الرياضيات ليست مملة كما تعتقد! ، يأخذنا الكورس في رحاب نظرة مختلفة حول الرياضات ، استمتع بالمتابعة وكن مميزاً!",
-        "courseImage": "http://localhost/prjopps/img/courses/2bg-masthead.jpg",
+        "courseImage": "https://waseemssaeed.github.io/goonline/img/courses/2bg-masthead.jpg",
         "courseKeywords": ["مصفوفات","هندسة","رياضيات"],
         "courseSections":[{"secName": "مقدمة",
                             "secID": 1,
@@ -23,7 +23,7 @@
         "courseDuration": 25,
         "courseColor": "tomato",
         "courseAbout": "يعتبر ماتلاب أحد البيئات المعروفة للتطبيقات الرياضية للبرمجة ، رغم تفوق لغات حديثة عليه مثل بايثون ، يبقى ماتلاب محبباً للبعض ، فهيا بنا نتعلم الزيد عنه!",
-        "courseImage": "http://localhost/prjopps/img/courses/ecommerce-2607114_1920.jpg",
+        "courseImage": "https://waseemssaeed.github.io/goonline/img/courses/ecommerce-2607114_1920.jpg",
         "courseKeywords": ["برمجة","ماتلاب","هندسة"],
         "courseSections":[
             {
@@ -44,7 +44,7 @@
         "courseDuration": 17,
         "courseAbout": " جزء سلسلة من التدريبات التي تهدف إلى تمكين الطلاب بمجال مشاريع الروبوتيك والأتمتة والتكنولوجيا الحديثة ، تمهيداً لتحضيرهم لتمثيل الجامعة في المسابقات الوطنية والدولية بهذا المجال إضافة إلى تشكيل كادر طلابي قادر على خدمة أنشطة الجامعة العلمية بهذا التخصص.",
         "courseColor": "rgb(64,64,100)",
-        "courseImage":"http://localhost/prjopps/img/courses/2bg-masthead.jpg",
+        "courseImage":"https://waseemssaeed.github.io/goonline/img/courses/2bg-masthead.jpg",
         "courseKeywords": ["برمجة","اردوينو","روبوتات"],
         "courseSections":[
             {
