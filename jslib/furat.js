@@ -88,7 +88,7 @@ function videoPage(courseID){
     this.homeArrow.innerHTML = 'A';
         this.homeArrow.classList = 'navBarHomeArrdow';
         this.homeArrow.addEventListener('click', ()=>{
-            window.location = 'http://localhost/prjopps/layouts/courseBrowse/';
+            window.location = 'https://waseemssaeed.github.io/goonline/layouts/courseBrowse/';
         }, false);
     
     this.userDataDownload.innerHTML = '{';
@@ -103,7 +103,7 @@ function videoPage(courseID){
     this.navBarLeftArrow.addEventListener('click', ()=>{
         gotoPreviousVideo(VDOBJ);
     });
-    this.videoInfo.innerHTML = '<div onclick="loader(\'http://localhost/prjopps/layouts/course/info-docs.html\')" class="barBtn">تحميل الملفات</div>\
+    this.videoInfo.innerHTML = '<div onclick="loader(\'https://waseemssaeed.github.io/goonline/layouts/course/info-docs.html\')" class="barBtn">تحميل الملفات</div>\
                                 <div onclick="loadCourse(\'courseAbout\')" class="barBtn">حول الكورس</div>\
                                 <div id="infoLoader"></div>';
     
@@ -147,7 +147,7 @@ function host(){
 function loadAllCourses(){
     var httpGetJSON = new XMLHttpRequest;
     if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
-        httpGetJSON.open("GET", "http://localhost/prjopps/jslib/testJSONCourse.json", true);
+        httpGetJSON.open("GET", "https://waseemssaeed.github.io/goonline/jslib/testJSONCourse.json", true);
         httpGetJSON.onreadystatechange = function(){
             if (httpGetJSON.readyState == 4)
             {
