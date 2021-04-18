@@ -1,0 +1,64 @@
+[
+    {"courseName": "الرياضيات 1 بنظرة جديدة",
+        "courseID": 0,
+        "courseDuration": 2,
+        "courseColor": "teal",
+        "courseAbout": "الرياضيات ليست مملة كما تعتقد! ، يأخذنا الكورس في رحاب نظرة مختلفة حول الرياضات ، استمتع بالمتابعة وكن مميزاً!",
+        "courseImage": "http://localhost/prjopps/img/courses/2bg-masthead.jpg",
+        "courseKeywords": ["مصفوفات","هندسة","رياضيات"],
+        "courseSections":[{"secName": "مقدمة",
+                            "secID": 1,
+                            "secVideos": [{"name": "تاريخ الرياضيات", "src": "../../recources/1.mp4", "id":1},
+                                            {"name": "منشأ المصفوفات - المصفوفات وحياتنا", "src": "../../recources/2.mp4", "id":2}]
+                            },
+                            {"secName": "التعمق في المصفوفات",
+                                "secID": 2,
+                                "secVideos":[{"name": "جمع المصفوفات", "src": "../../recources/3.mp4", "id":1},
+                                                {"name":"طرح المصفوفات", "src": "../../recources/4.mp4", "id":2}]
+                            }
+                        ]
+    },{
+        "courseName": "تطبيقات حول ماتلاب",
+        "courseID": 1,
+        "courseDuration": 25,
+        "courseColor": "tomato",
+        "courseAbout": "يعتبر ماتلاب أحد البيئات المعروفة للتطبيقات الرياضية للبرمجة ، رغم تفوق لغات حديثة عليه مثل بايثون ، يبقى ماتلاب محبباً للبعض ، فهيا بنا نتعلم الزيد عنه!",
+        "courseImage": "http://localhost/prjopps/img/courses/ecommerce-2607114_1920.jpg",
+        "courseKeywords": ["برمجة","ماتلاب","هندسة"],
+        "courseSections":[
+            {
+                "secName": "كسر الجليد مع البرمجة",
+                "secID": 1,
+                "secVideos": [{"name": "من أين أتت البرمجة؟", "src": "../../recources/1.mp4", "id":1},
+                                {"name": "ماذا سوف نتعلم في هذا الكورس", "src":"../../recources/2.mp4", "id":2}]
+            },{
+                "secName": "العمليات الرياضية الأساسية في ماتلاب",
+                "secID": 2,
+                "secVideos":[{"name":"تعريف المتغيرات", "src": "../../recources/2.mp4", "id":1},
+                                {"name": "جمع وطرح وضرب وقسمة المتغيرات", "src":"../../recources/3.mp4", "id":2}]
+            }
+        ]
+    },{
+        "courseName": "الروبوتيك 1",
+        "courseID": 2,
+        "courseDuration": 17,
+        "courseAbout": " جزء سلسلة من التدريبات التي تهدف إلى تمكين الطلاب بمجال مشاريع الروبوتيك والأتمتة والتكنولوجيا الحديثة ، تمهيداً لتحضيرهم لتمثيل الجامعة في المسابقات الوطنية والدولية بهذا المجال إضافة إلى تشكيل كادر طلابي قادر على خدمة أنشطة الجامعة العلمية بهذا التخصص.",
+        "courseColor": "rgb(64,64,100)",
+        "courseImage":"http://localhost/prjopps/img/courses/2bg-masthead.jpg",
+        "courseKeywords": ["برمجة","اردوينو","روبوتات"],
+        "courseSections":[
+            {
+                "secName": "كسر الجليد مع البرمجة",
+                "secID": 1,
+                "secVideos": [{"name": "التعرف على الكورس والبرمجيات المستخدمة", "src": "../../recources/1.mp4", "id":1},
+                                {"name": "تطبيق على دارة آردوينو", "src":"../../recources/2.mp4", "id":2},
+                                {"name": "إعادة تنفيذ التطبيق من الصفر وتفاصيل", "src":"../../recources/3.mp4", "id":2}]
+            },{
+                "secName": "العمليات الرياضية الأساسية في ماتلاب",
+                "secID": 2,
+                "secVideos":[{"name":"تعريف المتغيرات", "src": "../../recources/2.mp4", "id":1},
+                                {"name": "جمع وطرح وضرب وقسمة المتغيرات", "src":"../../recources/3.mp4", "id":2}]
+            }
+        ]
+    }
+]
