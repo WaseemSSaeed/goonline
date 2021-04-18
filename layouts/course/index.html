@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <!--<div class="navBar">
+        <span style="font-family: cov; color: white; font-size: 30px; line-height: 0.5in; cursor: pointer;">P</span>
+        <span style="display: inline-block; transform: rotateZ(-180deg); font-family: cov; color: white; font-size: 30px; line-height: 0.5in; margin-right: 0.5in; cursor: pointer;">P</span>
+    </div>
+    <div id="videoHolder" style="margin-top: 0.5in;">
+        <video src="../../recources/1.mp4" controls style="width: 100%; height: 100%;"></video>
+    </div>
+    <div id="videoAbout"></div>
+    <div id="videoInfo">
+        <div onclick="loader('info-docs.htm')" class="barBtn">تحميل الملفات</div>
+        <div onclick="loader('info-info.htm')" class="barBtn">حول الكورس</div>
+        <div onclick="loadCourse('intro', 'about')" class="barBtn">حول الكورس</div>
+        <div id="infoLoader"></div>
+    </div>
+    <div class="mainCmd"></div>-->
+</body>
+</html>
+
+<script src="../../jquery.js"></script>
+<script src="../../jslib/furat.js"></script>
+<script>
+    var myCoursePage = new videoPage();
+    myCoursePage.render();
+
+    var myVideo = new video();
+    myVideo.source = '../../recources/1.mp4';
+    myVideo.render();
+    
+    VDOBJ = myVideo;
+    loadAllCourses();
+</script>
