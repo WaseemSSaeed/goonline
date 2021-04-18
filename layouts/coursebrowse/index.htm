@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../course/style.css">
+    <title>Document</title>
+</head>
+<body onload="testy()" style="position: relative; padding: 0px; margin: 0px; margin-bottom: 1in;">
+    <div id="loading" style="position: fixed; top: 0px; text-align: center; width: 100vw; height: 100vh; background-color: royalblue; color: white;">
+        <br><br><br><br><br><br><br><br><br>
+        <span id="introLogo" style="font-size: 90px; font-family: leCafeTech2;">m</span>
+        <br>
+        <span style="position: relative; font-size: 40px;">جاري التحميل</span>
+        <br>
+        <span style="color: rgba(255, 255, 255, 0.555); margin-left: -80px; text-align: right;">
+            يلا نتخطى الظروف!
+        </span>
+    </div>
+
+    <div id="topMargin" style="height: 0.5in;"></div>
+    <div id="userPanel">
+        <span id="userInfo"></span>
+        <span id="userSubInfo"></span>
+        <span id="userFooterInfo"></span>
+        <button style="float: left; margin-left: 20px;">استعادة الجلسة</button>
+        <button style="float: left; margin-left: 20px;" onclick="loadUserDataEditor()">بيانات المستخدم</button>
+    </div>
+    <div id="body">
+
+    </div>
+</body>
+</html>
+
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #introLogo{
+        animation: anmo 5s;
+        display: block;
+    }
+    @keyframes anmo{
+        0%{
+            transform: rotateZ(0deg);
+        }
+        50%{
+            transform: rotateZ(-360deg);
+        }
+        100%{
+            transform: rotateZ(360deg);
+        }
+    }
+</style>
+
+<script src="../../jslib/furat.js"></script>
+<script src="../../jquery.js"></script>
+<script>    
+    loadAllCourses();
+    __isRenderCourseOnLoad = false;
+    setTimeout(() => {
+        var browser = new coursesBrowser();
+        __isRenderCourseOnLoad = false;
+        browser.render();
+
+        document.cookie = 'userLocalBackup=[{"lastCourse":"1", "userName": "وسيم"}]; name=waseem; expires=Mon, 31 Dec 2029 00:00:00 UTC;';
+        if(getCookie('userLocalBackup') != undefined){
+            document.getElementById('userInfo').innerHTML = 'لقد تم حفظ بياناتك على هذا الجهاز';
+            userData = getCookie('userLocalBackup');
+            userData = JSON.parse(userData);
+            lastCourseID = userData[0]['lastCourse'];
+            document.getElementById('userInfo').innerHTML = 'أهلاً يا ' + userData[0]['userName'] + ' ، لا زالت الرحلة ممتعة!';
+            document.getElementById('userSubInfo').innerHTML = 'في المرة الأخيرة كنت عند الكورس ' + __courses[lastCourseID]['courseName'];
+            document.getElementById('userFooterInfo').innerHTML += 'نحن نخزن البيانات الخاصة بك على جهازك الخاص ولا نحصل على بياناتك الخاصة';
+        } else {
+            document.getElementById('userInfo').innerHTML = 'يبدو أنك زائر جديد أو أنك تستخدم متصفح مختلف عن السابق';
+            document.getElementById('userSubInfo').innerHTML = 'هل تعتقد أنك تمتلك حساباً على المنصة من قبل؟';
+            document.getElementById('userSubInfo').innerHTML += '<br>' + 'نحن نخزن البيانات الخاصة بك على جهازك الخاص ولا نحصل على بياناتك الخاصة';
+            document.getElementById('userSubInfo').innerHTML += '<br>' + 'ننصح دائماً بتحميل ملف تعريفك الشخصي لتتمكن من استعادة الحساب بأي وقت ، هل لديك ملف تعريف؟';
+            document.getElementById('userSubInfo').innerHTML += ' استخدمه وابق آمناً! ، لا زلنا لا نحصل على معلوماتك الخاصة مطلقاً';
+            //document.cookie = 'userLocalBackup=[{"lastCourse":"1"}]; name=waseem; expires=Mon, 31 Dec 2029 00:00:00 UTC;';
+        }
+        function getCookie(cName){
+            cookies = document.cookie.split(';');
+            cookies.forEach(cookie => {
+                if(cookie.split(cName+'=') != 0){
+                    myCookie = cookie.split(cName+'=')[1];
+                } else {
+                    myCookie = undefined;
+                }
+            });
+            return myCookie;
+        }
+    }, 1000);
+
+    function testy(){
+        console.log('loaded');
+        $('#loading').slideUp(500);
+    }
+
+    function loadUserDataEditor(){
+        $('#userSubInfo').load('../userCookie/index.htm');
+    }
+</script>
