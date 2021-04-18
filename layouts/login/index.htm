@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../course/style.css">
+</head>
+<body id="body" onload="test()">
+    <div id="intro" style="position: fixed; top: 0px; text-align: center; width: 100vw; height: 100vh; background-color: royalblue; color: white;">
+        <br><br><br><br><br><br><br><br><br>
+        <span id="introLogo" style="font-size: 90px; font-family: leCafeTech2;">m</span>
+        <br>
+        <span style="position: relative; font-size: 40px;">goOnline</span>
+        <br>
+        <span style="color: rgba(255, 255, 255, 0.555); margin-left: -80px; text-align: right;">
+            يلا نتخطى الظروف!
+        </span>
+    </div>
+</body>
+</html>
+
+
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #introLogo{
+        animation: anmo 5s;
+        display: block;
+    }
+    @keyframes anmo{
+        0%{
+            transform: rotateZ(0deg);
+        }
+        50%{
+            transform: rotateZ(-360deg);
+        }
+        100%{
+            transform: rotateZ(360deg);
+        }
+    }
+</style>
+
+
+<script src="../../jquery.js"></script>
+<script src="../../jslib/furat.js"></script>
+<script>
+    tester = setTimeout(() => {
+        lefter = 0;
+        setInterval(() => {
+            document.getElementById('intro').style.top = lefter + 'px';
+            lefter += 10;
+            if(lefter > 1000){
+                document.getElementById('intro').style.visibility = 'hidden';
+            }
+        }, 10);
+        window.location = '../courseBrowse/index.htm';
+    }, 5600);
+
+    function test(){
+        /*clearTimeout(tester);
+        $('#body').load('../courseBrowse/index.html');*/
+    }
+</script>
