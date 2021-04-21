@@ -68,7 +68,7 @@ function course(courseName){
 
 VDOBJ = '';
 function videoPage(courseID){
-    this.navBar = document.createElement('div');
+    this.navBar = document.createElement('div'); this.navBar.id = 'navBar';
     this.videoHolder = document.createElement('div'); this.videoHolder.id = 'videoHolder';
     this.videoAbout = document.createElement('div'); this.videoAbout.id = 'videoAbout';
     this.videoInfo = document.createElement('div'); this.videoInfo.id = 'videoInfo';
