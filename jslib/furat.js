@@ -147,7 +147,7 @@ function host(){
 function loadAllCourses(){
     var httpGetJSON = new XMLHttpRequest;
     if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
-        httpGetJSON.open("GET", "https://waseemssaeed.gitub.io/goOnline/jslib/testJSONCourse.json", true);
+        httpGetJSON.open("GET", "https://waseemssaeed.github.io/goOnline/jslib/testJSONCourse.json", true);
         httpGetJSON.onreadystatechange = function(){
             if (httpGetJSON.readyState == 4)
             {
