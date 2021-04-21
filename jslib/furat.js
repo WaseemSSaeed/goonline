@@ -103,7 +103,7 @@ function videoPage(courseID){
     this.navBarLeftArrow.addEventListener('click', ()=>{
         gotoPreviousVideo(VDOBJ);
     });
-    this.videoInfo.innerHTML = '<div onclick="loader(\'http://localhost/prjopps/layouts/course/info-docs.html\')" class="barBtn">تحميل الملفات</div>\
+    this.videoInfo.innerHTML = '<div onclick="loader(\'https://waseemssaeed.github.io/goonline/prjopps/layouts/course/info-docs.html\')" class="barBtn">تحميل الملفات</div>\
                                 <div onclick="loadCourse(\'courseAbout\')" class="barBtn">حول الكورس</div>\
                                 <div id="infoLoader"></div>';
     
