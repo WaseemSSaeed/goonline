@@ -106,6 +106,7 @@
             userData = JSON.parse(userData);
             lastCourseID = userData[0]['lastCourse'];
             document.getElementById('userInfo').innerHTML = 'أهلاً يا ' + userData[0]['userName'] + ' ، لا زالت الرحلة ممتعة!';
+            console.log(lastCourseID);
             document.getElementById('userSubInfo').innerHTML = 'في المرة الأخيرة كنت عند الكورس ' + __courses[lastCourseID]['courseName'];
             document.getElementById('userFooterInfo').innerHTML += 'نحن نخزن البيانات الخاصة بك على جهازك الخاص ولا نحصل على بياناتك الخاصة';
         } else {
