@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../course/style.css">
+    <link rel="stylesheet" href="../course/css/cov.css">
+    <link rel="stylesheet" href="../course/css/leCafeTech2.css">
     <title>Document</title>
 </head>
 <body onload="testy()" id="bdymaster" onscroll="tester()" style="position: relative; padding: 0px; margin: 0px; margin-bottom: 1in;">
@@ -23,7 +25,7 @@
         <span id="userSubInfo"></span>
         <span id="userFooterInfo"></span>
         <button style="float: left; margin-left: 20px;">استعادة الجلسة</button>
-        <!--<button style="float: left; margin-left: 20px;" onclick="loadUserDataEditor()">بيانات المستخدم</button>-->
+        <button style="float: left; margin-left: 20px;" onclick="loadUserDataEditor()">بيانات المستخدم</button>
     </div>
     <div id="body">
 
@@ -108,7 +110,7 @@
             document.getElementById('userInfo').innerHTML = 'أهلاً يا ' + userData[0]['userName'] + ' ، لا زالت الرحلة ممتعة!';
             console.log("value is: " + lastCourseID);
             if(__courses[lastCourseID] != undefined){
-                  //document.getElementById('userSubInfo').innerHTML = 'في المرة الأخيرة كنت عند الكورس ' + __courses[lastCourseID]['courseName'];
+                  document.getElementById('userSubInfo').innerHTML = 'في المرة الأخيرة كنت عند الكورس ' + __courses[lastCourseID]['courseName'];
             }
             document.getElementById('userFooterInfo').innerHTML += 'نحن نخزن البيانات الخاصة بك على جهازك الخاص ولا نحصل على بياناتك الخاصة';
         } else {
