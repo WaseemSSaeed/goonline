@@ -145,14 +145,16 @@ function host(){
 }
 
 function loadAllCourses(){
+    console.log('called');
     var httpGetJSON = new XMLHttpRequest;
     if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
-        httpGetJSON.open("GET", "http://localhost/prjopps/jslib/testJSONCourse.json", true);
+        httpGetJSON.open("GET", "https://waseemssaeed.github.io/goonline/jslib/testJSONCourse.json", true);
         httpGetJSON.onreadystatechange = function(){
             if (httpGetJSON.readyState == 4)
             {
                 if (httpGetJSON.status == 200)
                 { 
+                    console.log('called 2');
                     __courses = [];
                     __thisCourseID = 2;
                     __thisSectionID = 0;
