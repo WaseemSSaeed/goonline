@@ -1,0 +1,102 @@
+<div id="userCookiesBdy">
+    <style>
+        #userCookiesBdy{
+            margin-bottom: 20px;
+        }
+        label{
+            font-size: 14px;
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-right: 20px;
+        }
+        input, textarea{
+            outline: none;
+            border: none;
+            width: 90%;
+            height: 0.3in;
+            font-size: 14px;
+            padding: 2px;
+            padding-top: 0px;
+            background-color: white;
+            color: rgb(64, 64, 64);
+            -webkit-text-fill-color: rgb(64, 64, 64);
+            border-bottom: royalblue 2px solid;
+            margin-bottom: 0.1in;
+            margin-top: 0.01in;
+            margin-right: 20px;
+        }
+        input:hover, textarea:hover{
+            background-color: rgb(64, 64, 64);
+            border-bottom: 2px rgb(212, 26, 26) solid;
+            color: white;
+            -webkit-text-fill-color: white;
+            transition: 0.5s;
+        }
+        textarea{
+            resize: vertical;
+        }
+    
+        button{
+            cursor: pointer;
+        }
+    
+        .section{
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-bottom: 1px double rgba(64, 64, 64, 0.774);
+            margin-bottom: 0.08in;
+            height: 0.3in;
+            line-height: 0.3in;
+            margin-right: 0px;
+        }
+    </style>
+    
+    <!--=====================================-->
+    <span class="section">معلومات أساسية</span>
+    
+    <span class="userFooterInfo">هذه البيانات تخزن على جهازك الخاص ، وتستخدم من أجل الشهادة</span>
+
+    <label for="userName">الاسم الأول</label>
+    <input type="text" name="userName" id="userName">
+    
+    <label for="midName">الاسم الأوسط</label>
+    <input type="text" name="midName" id="midName">
+    
+    <label for="lastname">الكنية</label>
+    <input type="text" name="lastname" id="lastname">
+    
+    <!--=====================================-->
+    <span class="section">تخصيص المنصة</span>
+
+    <label for="lastCourse">آخر كورس</label>
+    <input type="text" name="lastCourse" id="lastCourse" placeholder="">
+    
+    <!--=====================================-->
+    <span class="section">إجراءات</span>
+    <br>
+    <button onclick="downloadUserData()">إنشاء نسخة احتياطية</button>
+    <button id="save">حفظ</button>
+    <button id="cancel">إلغاء</button>    
+</div>
+
+<script>
+    document.getElementById('cancel').addEventListener('click', ()=>{
+        document.getElementById('userCookiesBdy').remove();
+    }, false);
+
+    document.getElementById('save').addEventListener('click', ()=>{
+        __userName = document.getElementById('userName').value;
+        __midName = document.getElementById('midName').value;
+        document.cookie = 'userLocalBackup=[{"lastCourse":"'+userData[0]['lastCourse']+'", "userName": "'+__userName+'", "midName":"'+__midName+'"}]; name=waseem; expires=Mon, 31 Dec 2029 00:00:00 UTC;';
+    }, false);
+
+    for (const key in userData[0]) {
+        if(userData[0][key] != false) {
+            if(key == 'lastCourse'){
+                document.getElementById(key).value = __courses[userData[0][key]]['courseName'];
+            } else {
+                document.getElementById(key).value = userData[0][key];
+            }
+        }
+    }
+</script>
